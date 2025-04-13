@@ -1,13 +1,13 @@
 <div align="center">
-<img src="https://github.com/alirezatheh/asus-n550jk-hackintosh/blob/readme-header-data/images/header-image.svg">
-<h1>Asus N550JK Hackintosh</h1>
+<img src="https://github.com/evgeniy-harchenko/asus-n550jv-hackintosh/blob/readme-header-data/images/header-image.svg">
+<h1>Asus N550JV Hackintosh</h1>
 
 [![Bootloader](https://badgen.net/badge/Bootloader/OpenCore/cyan?icon=terminal)](https://github.com/acidanthera/OpenCorePkg)
 [![macOS](https://badgen.net/badge/macOS/Ventura/orange?icon=apple)](https://www.apple.com/macos/ventura/)
 
 </div>
 
-A collection of all resources needed to run macOS on an Asus N550JK
+A collection of all resources needed to run macOS on an Asus N550JV
 
 
 ## Specifications
@@ -25,7 +25,7 @@ A collection of all resources needed to run macOS on an Asus N550JK
 This is more of a compilation of information and configs from various
 repositories and forums than a place where real development happens. This
 repository should contain everything needed to get macOS up and running on your
-specific Asus N550JK configuration.
+specific Asus N550JV configuration.
 
 
 ## Current Status
@@ -70,7 +70,7 @@ USB.
 
 ### Configuring EFI
 Download
-[latest release EFI](https://github.com/alirezah320/asus-n550jk-hackintosh/releases/latest)
+[latest release EFI](https://github.com/evgeniy-harchenko/asus-n550jv-hackintosh/releases/latest)
 to get the base EFI folder as well as all additional kexts and patches. If your
 hardware differs with mine you should modify EFI folder for your exact hardware
 configuration. If you don't know how to do that you should probably learn more
@@ -95,35 +95,13 @@ partition you have mounted in the previous step.
 		- XHCI Pre-Boot Mode **[ENABLED]**
 - Boot:
 	- Launch PXE OpROM policy **[DISABLED]**
-> Warning: The following step is completely optional and a little risky.
-> Also you'll need Windows in order to apply it.
-- In order to get full screen boot resolution, you must replace `CsmVideo` with
-`HermitCsmVideo` developed by Hermit Crab Labs. for this purpose just follow
-below steps:
-  1. Download
-     [latest release BIOS](https://github.com/alirezah320/asus-n550jk-hackintosh/releases/latest)
-     to get base requirements. At this point you can just open
-     [`N550JKAS.208-modified.rom`](https://github.com/alirezah320/asus-n550jk-hackintosh/blob/main/BIOS/N550JKAS.208-modified.rom)
-     with [AMI Firmware Update (AFU)](https://www.ami.com/resources/support-other/)
-     for Aptio 4, `Flash` it to your ROM, and skip next steps. But we highly
-     recommend to follow next steps and modify your own BIOS.
-	2. Extract your current BIOS by opening
-	   [AMI Firmware Update (AFU)](https://www.ami.com/resources/support-other/).
-	   for Aptio 4 and pressing `Save`.
-	3. Open extracted `[BIOS].rom` from previous step using
-	   [UEFITool](https://github.com/LongSoft/UEFITool).
-	4. Search for `CsmVideo` and replace the body with
-	   [HermitCsmVideo.fbd](BIOS/HermitCsmVideo.fbd) and save.
-	5. Open the new `[BIOS].rom` file with
-	   [AMI Firmware Update (AFU)](https://www.ami.com/resources/support-other/)
-	   for Aptio 4 and `Flash` it to your ROM.
 
 #### OpenCore Setting
 1. Rename
-   [`config.plist`](https://github.com/AlirezaTheH/asus-n550jk-hackintosh/blob/main/EFI/OC/config.plist)
+   [`config.plist`](https://github.com/evgeniy-harchenko/asus-n550jv-hackintosh/blob/main/EFI/OC/config.plist)
    to `config-backup.plist`.
 2. Rename
-   [`install-config.plist`](https://github.com/AlirezaTheH/asus-n550jk-hackintosh/blob/main/EFI/OC/install-config.plist)
+   [`install-config.plist`](https://github.com/evgeniy-harchenko/asus-n550jv-hackintosh/blob/main/EFI/OC/install-config.plist)
    to `config.plist`.
 
 ### Installation Process
@@ -232,4 +210,3 @@ support beginning with Mojave. Thus it's completely disabled to save power.
   [Plist Edit Pro](https://www.fatcatsoftware.com/plisteditpro/)
 - [mackie100projects](https://mackie100projects.altervista.org) for
   [OpenCore Configurator](https://mackie100projects.altervista.org/opencore-configurator/)
-- Hermit Crab Labs for HermitCsmVideo
