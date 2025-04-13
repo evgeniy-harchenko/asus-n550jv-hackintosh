@@ -11,9 +11,9 @@ A collection of all resources needed to run macOS on an Asus N550JV
 
 
 ## Specifications
-- **Processor**: Intel i7 4710HQ
+- **Processor**: Intel i7 4700HQ (Haswell)
 - **Integrated Graphics**: Intel® HD Graphics 4600
-- **Dedicated Graphics**: NVIDIA GeForce GTX 850M
+- **Dedicated Graphics**: NVIDIA GeForce GTX 750M
 - **Ethernet**: Realtek 8111G
 - **Audio**: Realtek ALC668
 - **Memory**: 16 GB
@@ -30,14 +30,10 @@ specific Asus N550JV configuration.
 
 ## Current Status
 - [x] Intel® HD Graphics 4600
-- [x] HDMI Output
-- [x] Mini Display Port Output (Not tested)
 - [x] Internal Speakers
 - [x] Internal Microphone
 - [x] Combo Jack Headphones
 - [x] Combo Jack Microphone
-- [x] HDMI Audio Output
-- [x] Mini DisplayPort Audio Output (Not tested)
 - [x] Sleep and Wake also with lid
 - [x] Touchpad with gestures
 - [x] Keyboard with backlight
@@ -55,7 +51,11 @@ specific Asus N550JV configuration.
 - [x] NVRAM
 - [x] macOS Recovery
 - [ ] Card Reader
-- [ ] NVIDIA GeForce GTX 850M (Disabled)
+- [ ] HDMI Output
+- [ ] Mini Display Port Output (Not tested)
+- [ ] HDMI Audio Output
+- [ ] Mini DisplayPort Audio Output (Not tested)
+- [ ] NVIDIA GeForce GTX 750M (Disabled)
 
 
 ## Installation
@@ -127,11 +127,6 @@ then from main menu select `Post-Install Root Patch` > `Start Root Patching`.
 #### OpenCore Setting
 1. Rename `config-backup.plist` to `config.plist`.
 2. Rename `config.plist` to `install-config.plist`.
-
-#### Wi-Fi Setting
-Download and install [HeliPort](https://github.com/OpenIntelWireless/HeliPort)
-which is Intel Wi-Fi client for
-[itlwm](https://github.com/OpenIntelWireless/itlwm).
 
 ### Updating masOS
 - Before every macOS update, switch the config files like the
@@ -210,3 +205,7 @@ support beginning with Mojave. Thus it's completely disabled to save power.
   [Plist Edit Pro](https://www.fatcatsoftware.com/plisteditpro/)
 - [mackie100projects](https://mackie100projects.altervista.org) for
   [OpenCore Configurator](https://mackie100projects.altervista.org/opencore-configurator/)
+- [superrnovae](https://github.com/superrnovae) for
+  [asusn550jv-hackintosh](https://github.com/superrnovae/asusn550jv-hackintosh/)
+- [rubinda](https://github.com/rubinda) for
+  [hackintosh-n550](https://github.com/rubinda/hackintosh-n550/)
